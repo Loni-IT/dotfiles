@@ -128,5 +128,5 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 "カラースキーム
 "colorscheme morning
-colorscheme koehler
+"colorscheme koehler
 
