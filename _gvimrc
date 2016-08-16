@@ -1,0 +1,12 @@
+"フォント設定
+set guifont=MS_Gothic:h15:cSHIFTJIS
+
+"カラー設定
+colorscheme torte
+
+"ツールバーを表示しない
+set guioptions-=T
+
+"起動時にウィンドウを最大化
+au GUIEnter * simalt ~x
+
