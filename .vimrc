@@ -1,6 +1,12 @@
 "バックスペースキーを有効にする
 set backspace=indent,eol,start
 
+"左右のスクロール時の視界を確保
+set sidescrolloff=16
+
+"左右のスクロールは1文字ずつ行う
+set sidescroll=1
+
 "ルーラー、行番号を表示
 set ruler
 set number
@@ -16,6 +22,9 @@ set hlsearch
 
 "インクリメンタル検索
 set incsearch
+
+"検索で大文字小文字を区別
+set noignorecase
 
 "変更中のファイルでも、保存しないで他のファイルを表示
 set hidden
