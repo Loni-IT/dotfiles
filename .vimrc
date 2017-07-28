@@ -111,7 +111,7 @@ set noundofile
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
 
-" 自動的にインデントしない
+"自動的にインデントしない
 set noautoindent
 set nosmartindent
 set nocindent
@@ -134,6 +134,15 @@ set timeoutlen=100
 
 "画面再描画時に検索の強調表示を無効化
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+"左右スクロール時の視界を確保
+set sidescrolloff=16
+
+"左右スクロールを1文字ずつ
+set sidescroll=1
+
+"ビープ音を視覚表示に切り替える。表示文字列はなし。
+set visualbell t_vb=
 
 "カラースキーム
 "colorscheme morning
