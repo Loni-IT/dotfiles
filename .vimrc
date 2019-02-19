@@ -150,4 +150,5 @@ nnoremap <C-]> g<C-]>
 "カラースキーム
 "colorscheme morning
 "colorscheme koehler
+"colorscheme torte
 
