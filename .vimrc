@@ -39,8 +39,8 @@ set nowrapscan
 set nowrap
 
 "エンコード設定
-set encoding=utf-8
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
+"set encoding=utf-8
+"set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 "set fileformats=unix,dos,mac
 
 "grepでcwindowを自動で開くようにする
@@ -50,15 +50,15 @@ au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 set list
 set listchars=tab:-\ ,trail:^
 
-"全角スペースを強調表示
+"全角スペースを強調表示 (1)
 "highlight zenkakuda ctermbg=7
 "call matchadd("zenkakuda", '\%u3000')
 
-"全角スペースを強調表示"
+"全角スペースを強調表示 (2)
 "highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
 "au BufRead,BufNew * match JpSpace /　/
 
-"全角スペースを強調表示
+"全角スペースを強調表示 (3)
 function! ZenkakuSpace()
   highlight ZenkakuSpace cterm=reverse ctermfg=darkgrey gui=reverse guifg=darkgrey
 endfunction
@@ -108,13 +108,16 @@ set nobackup
 "undo ファイルを作成しない
 set noundofile
 
-" コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
+"コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
 
 "自動的にインデントしない
 set noautoindent
 set nosmartindent
 set nocindent
+
+"改行で自動コメントしない
+set formatoptions-=ro
 
 "ノーマルモードのときにF2で前のバッファ、F3で次のバッファに移動
 "map <silent>    <F2>    :bp<cr>
@@ -132,17 +135,17 @@ let &t_EI .= "\e[<s\e[<0t"
 let &t_te .= "\e[<0t\e[<s"
 set timeoutlen=100
 
+"Beep音を消す
+set belloff=all
+
+"Beep音を視覚表示に切り替える。表示文字列はなし。
+set visualbell t_vb=
+
 "画面再描画時に検索の強調表示を無効化
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
-"左右スクロール時の視界を確保
-set sidescrolloff=16
-
-"左右スクロールを1文字ずつ
-set sidescroll=1
-
-"ビープ音を視覚表示に切り替える。表示文字列はなし。
-set visualbell t_vb=
+"tagsジャンプ時に候補が複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
 
 "カラースキーム
 "colorscheme morning
