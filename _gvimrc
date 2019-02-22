@@ -2,7 +2,7 @@
 set guifont=MS_Gothic:h15:cSHIFTJIS
 
 "カラー設定
-colorscheme torte
+colorscheme koehler
 
 "ツールバーを表示しない
 set guioptions-=T

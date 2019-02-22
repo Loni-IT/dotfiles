@@ -148,7 +148,6 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap <C-]> g<C-]>
 
 "カラースキーム
-"colorscheme morning
 "colorscheme koehler
-"colorscheme torte
+colorscheme torte
 
