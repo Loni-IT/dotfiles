@@ -111,6 +111,12 @@ set noundofile
 "コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
 
+"インデント
+set tabstop=8
+set softtabstop=0
+set shiftwidth=0
+set noexpandtab
+
 "自動的にインデントしない
 set noautoindent
 set nosmartindent
@@ -148,6 +154,6 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap <C-]> g<C-]>
 
 "カラースキーム
-"colorscheme koehler
-colorscheme torte
+"colorscheme koehler  "gvim
+colorscheme torte    "TeraTerm
 
