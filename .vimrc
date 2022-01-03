@@ -40,7 +40,7 @@ set nowrap
 
 "エンコード設定
 "set encoding=utf-8
-"set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
+set fileencodings=utf-8,cp932,iso-2022-jp,sjis,euc-jp
 "set fileformats=unix,dos,mac
 
 "grepでcwindowを自動で開くようにする
