@@ -50,30 +50,13 @@ au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 set list
 set listchars=tab:-\ ,trail:^
 
-"全角スペースを強調表示 (1)
-"highlight zenkakuda ctermbg=7
-"call matchadd("zenkakuda", '\%u3000')
-
-"全角スペースを強調表示 (2)
-"highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
-"au BufRead,BufNew * match JpSpace /　/
-
-"全角スペースを強調表示 (3)
-function! ZenkakuSpace()
-  highlight ZenkakuSpace cterm=reverse ctermfg=darkgrey gui=reverse guifg=darkgrey
-endfunction
-
-if has('syntax')
-  augroup ZenkakuSpace
-    autocmd!
-    " ZenkakuSpaceをカラーファイルで設定するなら次の行は削除
-    autocmd ColorScheme       * call ZenkakuSpace()
-    " 全角スペースのハイライト指定
-    autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
-    autocmd VimEnter,WinEnter * match ZenkakuSpace '\%u3000'
-  augroup END
-  call ZenkakuSpace()
-endif
+"全角スペースを強調表示
+scriptencoding utf-8
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=darkcyan guibg=darkcyan
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
 
 "ステータスラインを常に表示
 set laststatus=2
