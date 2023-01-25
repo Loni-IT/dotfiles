@@ -150,5 +150,6 @@ nnoremap <C-]> g<C-]>
 
 "カラースキーム
 "colorscheme koehler  "gvim
-colorscheme torte    "TeraTerm
+"colorscheme torte    "TeraTerm
+colorscheme darkblue  "mintty
 
