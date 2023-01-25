@@ -118,11 +118,23 @@ set formatoptions-=ro
 "「日本語入力固定モード」切り替えキー
 "inoremap <silent> <C-j> <C-^>
 
-"挿入モードから抜けた時に IME をオフ、再度挿入モードに入った時に IME 状態を元に戻す(TeraTerm)
+"挿入モードから抜けた時に IME をオフ、再度挿入モードに入った時に IME 状態を元に戻す
 let &t_SI .= "\e[<r"
 let &t_EI .= "\e[<s\e[<0t"
 let &t_te .= "\e[<0t\e[<s"
 set timeoutlen=100
+
+"[mintty]
+" Vim 起動時に非点滅のブロック型のカーソル
+let &t_ti.="\e[2 q"
+" 挿入モード時に点滅の縦棒型のカーソル
+let &t_SI .= "\e[5 q"
+" ノーマルモード時に非点滅のブロック型のカーソル
+let &t_EI .= "\e[2 q"
+" 置換モード時に非点滅の下線型のカーソル
+let &t_SR .= "\e[4 q"
+" vim 終了時にカーソルを mintty のデフォルトに設定
+let &t_te.="\e[0 q"
 
 "Beep音を消す
 set belloff=all
