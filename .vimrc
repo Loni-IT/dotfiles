@@ -1,7 +1,8 @@
 "バックスペースキーを有効にする
 set backspace=indent,eol,start
 
-"左右のスクロール時の視界を確保
+"スクロール時の視界
+set scrolloff=0
 set sidescrolloff=16
 
 "左右のスクロールは1文字ずつ行う
